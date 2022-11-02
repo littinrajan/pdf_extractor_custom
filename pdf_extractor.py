@@ -27,5 +27,5 @@ def pdf_entity_extraction(pdf_path):
 
 
 if __name__ == '__main__':
-    pdf_file_path = path.join('data', 'Aventus ML Machine test')
+    pdf_file_path = path.join('data', 'Aventus ML Machine test.pdf')
     pdf_entity_extraction(pdf_file_path)
