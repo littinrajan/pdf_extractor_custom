@@ -37,8 +37,14 @@ rule_bank = {'Payer Name': ["(?<=payer name)", ".*", 1],
              }
 
 def extract_entities(text_data):
+    """
+    Function to extract entities
+    :param text_data: pre-processed text data
+    :return: extracted_data
+    """
     # initializing dictionary to store extracted entities
     extracted_data = {}
+
     # iterating over each rule on rule bank
     for rule in rule_bank.keys():
         # getting prefix rule, suffix rule and mode for each rule
@@ -59,3 +65,4 @@ def extract_entities(text_data):
                 pass
         else:
             continue
+        return extracted_data
