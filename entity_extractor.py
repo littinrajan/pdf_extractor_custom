@@ -65,4 +65,4 @@ def extract_entities(text_data):
                 pass
         else:
             continue
-        return extracted_data
+    return extracted_data
