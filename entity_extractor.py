@@ -1,19 +1,21 @@
+# import required libraries
 import re
 
 relationships = ['spouse', 'grandfather', 'grandmother', 'grandson', 'granddaughter', 'nephew', 'niece', 'child', 'father', 'mother']
-middle_rule = "\s{0,2}[:]{0,1}\s{0,1}"
+middle_rule = "\s{0,2}[:]{0,2}\s{0,1}"
 
 rule_bank = {'Payer Name': ["(?<=payer name)", ".*", 1],
-             'Provider Tax ID': ["(?<=provider tax id number)", "XXXXX\d{4}", 1],
+             'Provider Tax ID': ["(?<=provider tax id number)", "X{5}\d{4}", 1],
              'Remittance Number': ["(?<=remittance number)", "\d{13}", 1],
              'Pay To': ["(?<=pay to the\norder of)", ".*", 1],
              'Remittance Advice Number': ["(?<=remittance advice number)", "\d{13}", 1],
-             'Federal Tax ID': ["(?<=federal tax id)", "XXXXX\d{4}", 1],
+             'Federal Tax ID': ["(?<=federal tax id)", "X{5}\d{4}", 1],
              'Remittance ID': ["(?<=remittance id)", "\d{13}", 1],
              'Check Number': ["(?<=check number)", "\d{10}", 1],
              'Bank Code': ["(?<=bank code)", "[A-Z]{2}\d", 1],
              'Amount': ["(?<=amount)", "\d{1,}[.]\d{2}", 1],
              'Contact Address': ["(?<=contact \n)", "([^.]*)", 3],
+             'Post Box': ["(?<=PO BOX)", "\d{5}", 1],
              'Contact Number': ["(?<=call)", "\d-\d{3}-\d{3}-\d{4}", 1],
              'Date': ["(?<=date)", "\d{2}/\d{2}/\d{4}", 1],
              'Provider ID': ["(?<=provider id)", "\d{12}", 1],
