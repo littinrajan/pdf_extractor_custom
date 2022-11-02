@@ -23,8 +23,6 @@ def pdf_to_image_conversion(pdf_path):
                 rgb_image = image_n
             # save pages as images in the destination folder
             rgb_image.save(file_path, 'PNG')
-        print("PDF have converted to images by pages")
     except Warning:
-        print('No images converted from the given PDF file')
         pass
     return file_name_list
