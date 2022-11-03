@@ -1,7 +1,7 @@
 # pdf_extractor_custom
 Customized PDF Data Extraction
 
-N.B.: Install both Poppler and Tesseract-OCR and set pathto work with PDF Extractor
+N.B.: Install both Poppler and Tesseract-OCR and set path in order to work with PDF Extractor
 
 ![Author](https://img.shields.io/badge/author-littinrajan-blue)
 ![Issues](https://img.shields.io/github/issues/littinrajan/pdf_extractor_custom) 
